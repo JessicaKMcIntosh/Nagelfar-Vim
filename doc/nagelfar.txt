@@ -1,12 +1,117 @@
-*nagelfar.txt*      Vim integration of Nagelfar for checking .tcl files.
-                             For Vim version 7.x.
-                           Last Change: 2011-09-17
-	
+*nagelfar.txt*	For Vim version 7.x.	Last Change: 2011-09-17
 
+                   https://github.com/LStinson/Nagelfar-Vim
                         By Lorance Stinson AT Gmail...
 
-						    *nagelfar* *Nagelfar-Vim*
-	Contents:
+Vim integration of Nagelfar			*nagelfar* *Nagelfar-Vim*
 
-		Description................|nagelfar-description|
-		Settings......................|nagelfar-settings|
+Contents:
+	Description				|nagelfar-description|
+	Commands				|nagelfar-commands|
+	Mappings				|nagelfar-mappings|
+	Settings				|nagelfar-settings|
+	Signs					|nagelfar-signs|
+
+
+==============================================================================
+DESCRIPTION					*nagelfar-description*
+
+Integrates Nagelfar with Vim using the |quickfix|/|compiler| features for
+syntax checking of .tcl files. Settings are provided to control how Nagelfar
+is called and behaves.
+
+Nagelfar can be downloaded from <http://nagelfar.berlios.de/>
+This script is intended to be used with the latest version.
+
+==============================================================================
+COMMANDS					*nagelfar-commands*
+
+Commands created for user use.
+
+:NagelfarClear                                  *:NagelfarClear*
+	Clear the signs created after running |:make|.
+
+==============================================================================
+MAPPINGS					*nagelfar-mappings*
+
+Convenience key mappings for working with Nagelfar and errors.
+See |nagelfar-settings| for changing the prefix.
+These mappings are only created in buffers that have the Nagelfar compiler
+loaded. No other buffers, even the error window, have these mappings.
+
+<Leader>n[      |:cprevious|
+	Move to the precvious error.
+
+<Leader>n]      |:cnext|
+	Move to the next error.
+
+<Leader>nc      |:NagelfarClear|
+	Clears the signs created after a make.
+
+<Leader>nM      |:make|!
+	Checks the syntax but does not jump to the first error.
+
+<Leader>nm      |:make|
+	Checks the syntax then jumps to the first error.
+
+<Leader>nw      |:cwindow|
+	Displays the error window, if there are errors.
+
+==============================================================================
+SETTINGS					*nagelfar-settings*
+
+g:nagelfar_tclsh
+	The name and/or path to the tclsh program.
+	Defaults to simply "tclsh". >
+		 let g:nagelfar_tclsh='/usr/local/bin/tclsh'
+<
+
+g:nagelfar_file
+	The path to the "nagelfar.tcl" file.
+	If not specified assumes "nagelfar.tcl" is in the path.
+	Does not use "tclsh" or g:nagelfar_tclsh. >
+		 let g:nagelfar_file='~/tcl/nagelfar/nagelfar.tcl'
+<
+
+g:nagelfar_options
+	Options to pass to Nagelfar. Separate multiple options by spaces.
+	Defaults to only "-H". >
+		 let g:nagelfar_options='-H -strictappend'
+<
+
+g:nagelfar_disable_mappings
+	When set to "1" disables the convenience key mappings.
+	See |nagelfar-mappings| for details
+		 let g:nagelfar_disable_mappings=1
+<
+
+g:nagelfar_map_prefix
+	The prefix to use for convenience key mappings.
+	Defaults to "<Leader>n". ("<Leader>" is normally set to "\".
+		 let g:nagelfar_map_prefix="<Leader>n"
+<
+
+g:nagelfar_signs
+	When set to "1" enables the Vim |signs| feature.
+	Defaults to off, "0". See |nagelfar-signs| for details.
+		 let g:nagelfar_signs=1
+<
+
+g:loaded_nagelfar_ext
+	When set to "1" the extensions are no loaded.
+	Defaults to "0".
+		 let g:loaded_nagelfar_ext=1
+<
+
+==============================================================================
+SIGNS						*nagelfar-signs*
+
+The Vim |signs| feature can be used to highlight errors. Markers are placed
+next to each line that has an error or warning.
+
+Markers:
+	I>	Information
+	W>	Warning
+	E>	Error
+
+ vim:ts=8:sw=8:tw=78:ft=help:
