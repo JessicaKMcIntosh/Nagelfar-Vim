@@ -2,6 +2,12 @@ Vim integration of Nagelfar for checking .tcl files.
 This is done using the compiler/quickfix features of Vim.
 
 Nagelfar can be downloaded from <http://nagelfar.berlios.de/>
+This script is intended to be used with the latest version.
 
 To install copy the files to ~/.vim or ~/vimfiles.
-If using a package manager like pathgen place the whole directory in the bundle directory.
+If using a package manager like pathgen place the whole directory in the bundle
+directory.
+
+At some point ':compiler nagelfar' needs to be called to use this plugin.
+I recommend putting ':autocmd FileType tcl compiler nagelfar' in your ~/.vimrc
+or ~/_vimrc file.

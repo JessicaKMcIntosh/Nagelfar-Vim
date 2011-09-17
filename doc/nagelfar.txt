@@ -1,12 +1,14 @@
 *nagelfar.txt*	For Vim version 7.x.	Last Change: 2011-09-17
 
                    https://github.com/LStinson/Nagelfar-Vim
+             http://www.vim.org/scripts/script.php?script_id=3749
                         By Lorance Stinson AT Gmail...
 
 Vim integration of Nagelfar			*nagelfar* *Nagelfar-Vim*
 
 Contents:
 	Description				|nagelfar-description|
+	Installation				|nagelfar-installation|
 	Commands				|nagelfar-commands|
 	Mappings				|nagelfar-mappings|
 	Settings				|nagelfar-settings|
@@ -22,6 +24,17 @@ is called and behaves.
 
 Nagelfar can be downloaded from <http://nagelfar.berlios.de/>
 This script is intended to be used with the latest version.
+
+==============================================================================
+INSTALLATION					*nagelfar-installation*
+
+Copy the files to your ~/.vim or ~/vimfiles dorectory.
+If using a package manager like pathgen place the whole directory in the
+bundle directory.
+
+At some point ':compiler nagelfar' needs to be called to use this plugin.
+I recommend putting ':autocmd FileType tcl compiler nagelfar' in your ~/.vimrc
+or ~/_vimrc file.
 
 ==============================================================================
 COMMANDS					*nagelfar-commands*
