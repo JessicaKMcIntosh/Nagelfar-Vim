@@ -1,0 +1,12 @@
+*nagelfar.txt*      Vim integration of Nagelfar for checking .tcl files.
+                             For Vim version 7.x.
+                           Last Change: 2011-09-17
+	
+
+                        By Lorance Stinson AT Gmail...
+
+						    *nagelfar* *Nagelfar-Vim*
+	Contents:
+
+		Description................|nagelfar-description|
+		Settings......................|nagelfar-settings|

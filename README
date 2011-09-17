@@ -1,0 +1,2 @@
+Vim integration of Nagelfar for checking .tcl files.
+This is done using the compiler/quickfix features of Vim.
