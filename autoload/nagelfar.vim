@@ -54,7 +54,7 @@ function! nagelfar#CreateSigns()
         let b:nagelfar_sign_list=[]
     endif
 
-    let l:bufnr=bufnr('$')
+    let l:bufnr=bufnr('%')
     for item in getqflist()
         if item.bufnr != l:bufnr
             continue
