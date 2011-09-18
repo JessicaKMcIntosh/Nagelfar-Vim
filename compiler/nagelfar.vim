@@ -36,6 +36,7 @@ endif
 " Create user commands.
 if g:loaded_nagelfar_ext == 0
     command! -nargs=0 NagelfarClear     :call nagelfar#ClearSigns()
+    command! -nargs=0 NagelfarSigns     :call nagelfar#CreateSigns()
 endif
 
 " Key Mappings.

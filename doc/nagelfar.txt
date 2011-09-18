@@ -44,16 +44,21 @@ Commands created for user use.
 :NagelfarClear                                  *:NagelfarClear*
 	Clear the signs created after running |:make|.
 
+:NagelfarSigns                                  *:NagelfarSigns*
+	Display the signs for the current buffer.
+
 ==============================================================================
 MAPPINGS					*nagelfar-mappings*
 
 Convenience key mappings for working with Nagelfar and errors.
 See |nagelfar-settings| for changing the prefix.
-These mappings are only created in buffers that have the Nagelfar compiler
-loaded. No other buffers, even the error window, have these mappings.
+
+Note: These mappings are only created in buffers that have the Nagelfar
+      compiler loaded. No other buffers, even the error window, have these
+      mappings. The mappings are also only for normal mode.
 
 <Leader>n[      |:cprevious|
-	Move to the precvious error.
+	Move to the previous error.
 
 <Leader>n]      |:cnext|
 	Move to the next error.
@@ -61,14 +66,23 @@ loaded. No other buffers, even the error window, have these mappings.
 <Leader>nc      |:NagelfarClear|
 	Clears the signs created after a make.
 
+<Leader>nC      |:cclose|
+	Closes the error window.
+
 <Leader>nM      |:make|!
 	Checks the syntax but does not jump to the first error.
 
 <Leader>nm      |:make|
 	Checks the syntax then jumps to the first error.
 
-<Leader>nw      |:cwindow|
-	Displays the error window, if there are errors.
+<Leader>ns      |:NagelfarSigns|
+	Displays the sign markers for the current buffer.
+	This works regardless of the g:nagelfar_signs setting.
+
+<Leader>nw      |:copen|
+	Displays and/or switches to the error window.
+
+Note: The |Leader| key is normally set to "\".
 
 ==============================================================================
 SETTINGS					*nagelfar-settings*

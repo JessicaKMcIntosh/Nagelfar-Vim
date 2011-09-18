@@ -27,10 +27,12 @@ sign define nagelfarerror   text=E>     texthl=Error
 function! nagelfar#MapKeys()
     exec 'nnoremap <silent> <buffer> '. g:nagelfar_map_prefix . '[ :cprevious<cr>'
     exec 'nnoremap <silent> <buffer> '. g:nagelfar_map_prefix . '] :cnext<cr>'
+    exec 'nnoremap <silent> <buffer> '. g:nagelfar_map_prefix . 'C :cclose<cr>'
     exec 'nnoremap <silent> <buffer> '. g:nagelfar_map_prefix . 'c :NagelfarClear<cr>'
     exec 'nnoremap <silent> <buffer> '. g:nagelfar_map_prefix . 'M :make!<cr>'
     exec 'nnoremap <silent> <buffer> '. g:nagelfar_map_prefix . 'm :make<cr>'
-    exec 'nnoremap <silent> <buffer> '. g:nagelfar_map_prefix . 'w :cwindow<cr>'
+    exec 'nnoremap <silent> <buffer> '. g:nagelfar_map_prefix . 's :NagelfarSigns<cr>'
+    exec 'nnoremap <silent> <buffer> '. g:nagelfar_map_prefix . 'w :copen<cr>'
 endfunction
 
 " Clear signs set for the current buffer.
