@@ -64,13 +64,13 @@ function! nagelfar#CreateSigns()
         let l:sign_num = (l:bufnr * 10000000) + item.lnum
         if item.type == 'E'
             exec ':sign place ' . l:sign_num . ' line=' . item.lnum . 
-                \' name=nagelfarerror file=' . expand('%:p')
+                \' name=nagelfarerror buffer=' . l:bufnr
         elseif item.type == 'W'
             exec ':sign place ' . l:sign_num . ' line=' . item.lnum . 
-                \' name=nagelfarwarning file=' . expand('%:p')
+                \' name=nagelfarwarning buffer=' . l:bufnr
         else
             exec ':sign place ' . l:sign_num . ' line=' . item.lnum . 
-                \' name=nagelfarinfo file=' . expand('%:p')
+                \' name=nagelfarinfo buffer=' . l:bufnr
         endif
         call add(b:nagelfar_sign_list, l:sign_num)
     endfor
