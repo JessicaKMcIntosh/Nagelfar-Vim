@@ -1,12 +1,11 @@
-*nagelfar.txt*	For Vim version 7.x.	Last Change: 2011-09-17
-
+*nagelfar.txt* Vim integration of Nagelfar
+                             For Vim version 7.x.
+                  Last Changed: Fri Feb 03 12:51 PM 2012 EST
                    https://github.com/LStinson/Nagelfar-Vim
              http://www.vim.org/scripts/script.php?script_id=3749
                         By Lorance Stinson AT Gmail...
 
-Vim integration of Nagelfar			*nagelfar* *Nagelfar-Vim*
-
-Contents:
+Contents:					*nagelfar* *Nagelfar-Vim*
 	Description				|nagelfar-description|
 	Installation				|nagelfar-installation|
 	Commands				|nagelfar-commands|
