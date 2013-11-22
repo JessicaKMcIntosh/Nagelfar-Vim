@@ -1,9 +1,9 @@
 " =============================================================================
 " File:         nagelfar.vim (autoload plugin)
-" Maintainer:   Lorance Stinson AT Gmail...
-" Last Changed: 2011-09-17
+" Maintainer:   Jessica K McIntosh AT gmail DOT com
+" Last Changed: Fri Nov 22 05:35 AM 2013 EST
 " License:      Public Domain
-" GitHub URL:   https://github.com/LStinson/Nagelfar-Vim
+" GitHub URL:   https://github.com/JessicaKMcIntosh/Nagelfar-Vim
 " =============================================================================
 " Description:
 " Extensions to the Nagelfar compiler plugin.

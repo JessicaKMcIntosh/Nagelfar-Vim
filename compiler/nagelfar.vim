@@ -1,10 +1,10 @@
 " Vim compiler file
 " =============================================================================
 " Compiler:     tcl (Uses Nagelfar to check Syntax)
-" Maintainer:   Lorance Stinson AT Gmail...
+" Maintainer:   Jessica K McIntosh AT gmail DOT com
 " Last Change:  2011-09-17
 " License:      Public Domain
-" GitHub URL:   https://github.com/LStinson/Nagelfar-Vim
+" GitHub URL:   https://github.com/JessicaKMcIntosh/Nagelfar-Vim
 " =============================================================================
 " Description:
 " This file allows syntax checking of .tcl files using Nagelfar.
